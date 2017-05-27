@@ -1,9 +1,5 @@
 apply plugin: 'com.android.library'
-ext{
-    PUBLISH_GROUP_ID = 'relish.wang.sdk'
-    PUBLISH_ARTIFACT_ID = 'ugo'
-    PUBLISH_VERSION = '0.0.1-SNAPSHOT'
-}
+
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
@@ -36,5 +32,5 @@ dependencies {
     compile 'com.jakewharton:butterknife:7.0.1'
     compile 'org.litepal.android:core:1.5.1'
 }
-
-apply from: 'https://raw.githubusercontent.com/blundell/release-android-library/master/android-release-aar.gradle'
+apply plugin: 'com.github.dcendents.android-maven'
+group='com.github.relish-wang'
